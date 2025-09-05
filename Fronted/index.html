@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBL CINEMAX - Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- El formulario ahora tiene un id="loginForm" -->
+        <form class="login-form" id="loginForm">
+            <div class="form-header">
+                <h1>NBL CINEMAX</h1>
+                <p>Bienvenido a la experiencia del futuro</p>
+            </div>
+            
+            <div class="input-group">
+                <!-- El input de email tiene un id="email" -->
+                <input type="email" id="email" name="email" required>
+                <label for="email">Correo Electrónico</label>
+            </div>
+            <div class="input-group">
+                <!-- El input de contraseña tiene un id="password" -->
+                <input type="password" id="password" name="password" required>
+                <label for="password">Contraseña</label>
+            </div>
+            
+            <!-- El botón ahora es de tipo "submit" -->
+            <button type="submit" class="btn-login" id="loginButton">
+                Entrar
+            </button>
+            
+            <div class="form-footer">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <p>¿No tienes cuenta? <a href="#">Regístrate</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- El script.js se enlaza al final -->
+    <script src="script.js"></script>
+</body>
+</html>

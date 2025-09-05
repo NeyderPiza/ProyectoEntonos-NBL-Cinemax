@@ -1,0 +1,11 @@
+# Conexión a la base de datos MySQL
+spring.datasource.url=jdbc:mysql://localhost:3306/nbl_cinemax_db
+spring.datasource.username=root
+spring.datasource.password= neider2503
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+# Configuración de JPA/Hibernate
+spring.jpa.hibernate.ddl-auto=update # 'update' o 'validate'. Usa 'validate' en producción.
+
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true

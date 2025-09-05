@@ -1,0 +1,5 @@
+package com.uis.entornos.dto;
+
+public class RegisterRequest {
+
+}

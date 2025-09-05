@@ -1,0 +1,5 @@
+package com.uis.entornos.servicio;
+
+public class AuthService {
+
+}

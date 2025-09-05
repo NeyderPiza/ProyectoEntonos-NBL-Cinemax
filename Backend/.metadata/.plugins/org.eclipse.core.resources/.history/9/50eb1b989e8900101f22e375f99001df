@@ -1,0 +1,5 @@
+package com.uis.entornos.repositorio;
+
+public interface CiudadRepository {
+
+}

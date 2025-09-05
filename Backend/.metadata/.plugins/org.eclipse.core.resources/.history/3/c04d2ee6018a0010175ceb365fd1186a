@@ -1,0 +1,5 @@
+package com.uis.entornos.configuracion;
+
+public class ApplicationConfig {
+
+}
