@@ -1,0 +1,216 @@
+/* admin-style.css */
+:root {
+    --primary-color: #00ffff;
+    --secondary-color: #1a1a3a;
+    --dark-color: #0f0f1f;
+    --text-color: #e0e0e0;
+    --border-color: #00ffff44;
+    --danger-color: #ff4757;
+    --success-color: #2ecc71;
+}
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- Menú Lateral (Sidebar) --- */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid var(--border-color);
+    box-shadow: 5px 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.sidebar .logo {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8em;
+    text-shadow: 0 0 8px var(--primary-color);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* Empuja el botón de logout hacia abajo */
+}
+
+.sidebar ul li a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    font-weight: bold;
+    transform: translateX(5px);
+}
+
+.logout-button {
+    background-color: transparent;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.3s, color 0.3s;
+}
+.logout-button:hover {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* --- Contenido Principal --- */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+#content-title {
+    color: var(--primary-color);
+    font-size: 2em;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    transition: box-shadow 0.3s;
+}
+.btn-primary:hover {
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* --- Estilos de la Tabla --- */
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.content-table th, .content-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.content-table thead th {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+.content-table tbody tr:hover {
+    background-color: #ffffff1a;
+}
+
+.actions a {
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: text-shadow 0.3s;
+}
+
+.actions a.edit {
+    color: var(--success-color);
+}
+.actions a.edit:hover {
+    text-shadow: 0 0 5px var(--success-color);
+}
+
+.actions a.delete {
+    color: var(--danger-color);
+}
+.actions a.delete:hover {
+    text-shadow: 0 0 5px var(--danger-color);
+}
+
+/* --- Estilos del Modal (Pop-up) --- */
+.modal-container {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-modal-button {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.close-modal-button:hover {
+    color: var(--primary-color);
+}
+
+#modal-form .form-group {
+    margin-bottom: 20px;
+}
+
+#modal-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+#modal-form input, #modal-form textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--dark-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: inherit;
+    box-sizing: border-box; /* Importante para que el padding no afecte el ancho */
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - NBL CINEMAX</title>
+    <!-- Enlazamos la nueva hoja de estilos -->
+    <link rel="stylesheet" href="admin-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Menú de Navegación Lateral Fijo -->
+        <nav class="sidebar">
+            <h1 class="logo">NBL ADMIN</h1>
+            <ul>
+                <!-- Enlaces para cargar las diferentes secciones -->
+                <li><a href="#" id="nav-ciudades">Gestionar Ciudades</a></li>
+                <li><a href="#" id="nav-peliculas">Gestionar Películas</a></li>
+            </ul>
+            <!-- Botón para cerrar sesión -->
+            <button id="logout-button" class="logout-button">Cerrar Sesión</button>
+        </nav>
+
+        <!-- Contenido Principal que cambiará dinámicamente -->
+        <main class="main-content">
+            <header>
+                <h2 id="content-title">Bienvenido al Panel</h2>
+            </header>
+            <div id="content-area">
+                <p>Selecciona una opción del menú lateral para comenzar a gestionar el contenido.</p>
+                <!-- Aquí es donde JavaScript inyectará las tablas de ciudades y películas -->
+            </div>
+        </main>
+    </div>
+
+    <!-- La Ventana Modal (Pop-up) para Añadir y Editar. Inicialmente está oculta. -->
+    <div id="modal-container" class="modal-container">
+        <div class="modal-content">
+            <span class="close-modal-button">&times;</span>
+            <h3 id="modal-title">Título del Formulario</h3>
+            <form id="modal-form">
+                <!-- Los campos del formulario se generarán aquí con JavaScript -->
+                <div id="form-fields"></div>
+                <button type="submit" class="btn-primary">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enlazamos el nuevo archivo de JavaScript para el panel -->
+    <script src="admin.js"></script>
+</body>
+</html>
