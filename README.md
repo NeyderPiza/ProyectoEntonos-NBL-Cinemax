@@ -2,9 +2,9 @@
 Este repositorio contiene el código fuente del sistema de gestión de cines NBL CINEMAX. El proyecto implementa un backend robusto con **Spring Boot** que expone una API RESTful y un frontend dinámico construido con **HTML, CSS y JavaScript nativo** para la administración de contenido.
 
 ##  Autores
-Neider Alirio Piza Basto
-Leider Joanny Esteban Lozano
-Brayan Yecid Aparicio Goyeneche
+- Neider Alirio Piza Basto 
+- Leider Joanny Esteban Lozano
+- Brayan Yecid Aparicio Goyeneche
 
 ##  Descripción del Proyecto
 
@@ -47,16 +47,16 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarr
 -   Git instalado.
 
 ### 1. Clonar el Repositorio
+
 Abre una terminal y clona el proyecto desde GitHub:
+
 ```bash
-git clone [https://github.com/tu-usuario/nombre-del-repositorio.git](https://github.com/NeyderPiza/ProyectoEntonos-NBL-Cinemax)
-cd nombre-del-repositorio
+git clone https://github.com/NeyderPiza/ProyectoEntonos-NBL-Cinemax.git
+cd ProyectoEntonos-NBL-Cinemax
 
 ### 2. Configuración de la Base de Datos
 1.  **Crea la Base de Datos:** Abre MySQL Workbench y ejecuta la siguiente consulta para crear la base de datos:
-    ```sql
     CREATE DATABASE nbl_cinemax_db;
-    ```
 2.  **Crea las Tablas:** Dentro de la base de datos recién creada, ejecuta el script SQL proporcionado en el repositorio para generar todas las tablas y sus relaciones.
 
 ### 3. Configuración del Backend (Spring Boot)
