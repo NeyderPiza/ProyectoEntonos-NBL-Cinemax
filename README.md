@@ -1,10 +1,4 @@
 # NBL CINEMAX - Sistema de Gestión de Cines (Spring Boot + JS)
-
-![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-
 Este repositorio contiene el código fuente del sistema de gestión de cines NBL CINEMAX. El proyecto implementa un backend robusto con **Spring Boot** que expone una API RESTful y un frontend dinámico construido con **HTML, CSS y JavaScript nativo** para la administración de contenido.
 
 ##  Autores
@@ -18,7 +12,7 @@ NBL CINEMAX fue concebido para modernizar la administración de un cine, reempla
 
 El objetivo principal es proporcionar una herramienta interna eficiente y fácil de usar para el personal administrativo, sentando las bases para futuras expansiones como la venta de boletos en línea.
 
-## ✨ Características Implementadas
+##  Características Implementadas
 
 -   **Backend con Arquitectura REST:**
     -   API RESTful con endpoints claros y definidos para cada recurso.
@@ -32,7 +26,7 @@ El objetivo principal es proporcionar una herramienta interna eficiente y fácil
     -   **Gestión de Películas:** Módulo CRUD visual para la cartelera, presentando las películas en un formato de tarjetas con sus pósteres para una identificación rápida.
     -   **Experiencia de Usuario Mejorada:** Uso de ventanas modales para los formularios de creación/edición y notificaciones "toast" para confirmar acciones, proporcionando un flujo de trabajo fluido.
 
-## 🔧 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 | Área                | Tecnologías                                                              |
 | ------------------- | ------------------------------------------------------------------------ |
@@ -41,7 +35,7 @@ El objetivo principal es proporcionar una herramienta interna eficiente y fácil
 | **Frontend**        | `HTML5`, `CSS3 (Flexbox, Grid)`, `JavaScript (ES6+, Fetch API, Async/Await)` |
 | **Herramientas**    | `Git`, `GitHub`, `Spring Tool Suite 4`, `Postman`, `MySQL Workbench`       |
 
-## ⚙️ Guía de Instalación y Puesta en Marcha
+##  Guía de Instalación y Puesta en Marcha
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarrollo local.
 
@@ -55,42 +49,60 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarr
 ### 1. Clonar el Repositorio
 Abre una terminal y clona el proyecto desde GitHub:
 ```bash
-git clone https://github.com/tu-usuario/nombre-del-repositorio.git
+git clone [https://github.com/tu-usuario/nombre-del-repositorio.git](https://github.com/NeyderPiza/ProyectoEntonos-NBL-Cinemax)
 cd nombre-del-repositorio
 
-### **2. Configuración de la Base de Datos**
-Crea la Base de Datos: Abre MySQL Workbench y ejecuta la siguiente consulta para crear la base de datos:
-code
-SQL
-CREATE DATABASE nbl_cinemax_db;
-Crea las Tablas: Dentro de la base de datos recién creada, ejecuta el script SQL proporcionado en el repositorio para generar todas las tablas y sus relaciones.
-## **3. Configuración del Backend (Spring Boot)**
-Importa el Proyecto: Abre tu IDE (STS4) e importa el proyecto como un "Existing Maven Project". La carpeta a importar es la que contiene el archivo pom.xml.
-Configura la Conexión: Navega a src/main/resources/ y abre el archivo application.properties. Modifica las siguientes líneas con tus credenciales de MySQL:
-code
-Properties
-spring.datasource.url=jdbc:mysql://localhost:3306/nbl_cinemax_db
-spring.datasource.username=tu_usuario_mysql
-spring.datasource.password=tu_contraseña_mysql
-Ejecuta el Backend: Localiza la clase principal (ej. NblCinemaxApiApplication.java) y ejecútala como una "Spring Boot App". El servidor se iniciará en http://localhost:8080.
-## **4. Ejecución del Frontend (HTML/CSS/JS)**
-Navega a la carpeta del frontend que contiene los archivos index.html, principal.html, etc.
-La forma más sencilla de ejecutarlo es abrir el archivo index.html directamente en tu navegador web (Google Chrome, Firefox, etc.).
-(Recomendado) Para una mejor experiencia de desarrollo, puedes usar una extensión como "Live Server" en Visual Studio Code. Simplemente haz clic derecho en index.html y selecciona "Open with Live Server".
+### 2. Configuración de la Base de Datos
+1.  **Crea la Base de Datos:** Abre MySQL Workbench y ejecuta la siguiente consulta para crear la base de datos:
+    ```sql
+    CREATE DATABASE nbl_cinemax_db;
+    ```
+2.  **Crea las Tablas:** Dentro de la base de datos recién creada, ejecuta el script SQL proporcionado en el repositorio para generar todas las tablas y sus relaciones.
+
+### 3. Configuración del Backend (Spring Boot)
+1.  **Importa el Proyecto:** Abre tu IDE (STS4) e importa el proyecto como un "Existing Maven Project". La carpeta a importar es la que contiene el archivo `pom.xml`.
+2.  **Configura la Conexión:** Navega a `src/main/resources/` y abre el archivo `application.properties`. Modifica las siguientes líneas con tus credenciales de MySQL:
+    ```properties
+    spring.datasource.url=jdbc:mysql://localhost:3066/nbl_cinemax_db
+    spring.datasource.username=tu_usuario_mysql
+    spring.datasource.password=tu_contraseña_mysql
+    ```
+3.  **Ejecuta el Backend:** Localiza la clase principal (ej. `NblCinemaxApiApplication.java`) y ejecútala como una "Spring Boot App". El servidor se iniciará en `http://localhost:8080`.
+
+### 4. Ejecución del Frontend (HTML/CSS/JS)
+1.  Navega a la carpeta del frontend que contiene los archivos `index.html`, `principal.html`, etc.
+2.  La forma más sencilla de ejecutarlo es abrir el archivo `index.html` directamente en tu navegador web (Google Chrome, Firefox, etc.).
+3.  **(Recomendado)** Para una mejor experiencia de desarrollo, puedes usar una extensión como **"Live Server"** en Visual Studio Code. Simplemente haz clic derecho en `index.html` y selecciona "Open with Live Server".
+
 ¡Y listo! Ya puedes navegar a la página de login, autenticarte y empezar a usar el panel de administración.
- ## **Documentación de la API**
+
+##  Documentación de la API
+
 Los siguientes son los endpoints principales implementados en el backend.
-Método	Endpoint	Descripción	Requiere Auth
-POST	/api/auth/register	Registra un nuevo usuario administrador.	No
-POST	/api/auth/login	Autentica a un usuario y devuelve un token JWT.	No
-Método	Endpoint	Descripción	Requiere Auth
-GET	/api/ciudades	Obtiene la lista de todas las ciudades.	No
-POST	/api/ciudades	Crea una nueva ciudad.	Sí
-PUT	/api/ciudades/{id}	Actualiza una ciudad existente.	Sí
-DELETE	/api/ciudades/{id}	Elimina una ciudad.	Sí
-Método	Endpoint	Descripción	Requiere Auth
-GET	/api/peliculas	Obtiene la lista de todas las películas.	No
-POST	/api/peliculas	Crea una nueva película.	Sí
-PUT	/api/peliculas/{id}	Actualiza una película existente.	Sí
-DELETE	/api/peliculas/{id}	Elimina una película.	Sí
-Para acceder a los endpoints protegidos, se debe incluir el token en la cabecera de la petición: Authorization: Bearer <token_jwt>.
+
+---
+**Autenticación**
+| Método | Endpoint                    | Descripción                               | Requiere Auth |
+|--------|-----------------------------|-------------------------------------------|---------------|
+| `POST` | `/api/auth/register`        | Registra un nuevo usuario administrador.  | No            |
+| `POST` | `/api/auth/login`           | Autentica a un usuario y devuelve un token JWT. | No            |
+
+---
+**Ciudades**
+| Método | Endpoint                    | Descripción                               | Requiere Auth |
+|--------|-----------------------------|-------------------------------------------|---------------|
+| `GET`  | `/api/ciudades`             | Obtiene la lista de todas las ciudades.   | No            |
+| `POST` | `/api/ciudades`             | Crea una nueva ciudad.                    | **Sí**        |
+| `PUT`  | `/api/ciudades/{id}`        | Actualiza una ciudad existente.           | **Sí**        |
+| `DELETE`| `/api/ciudades/{id}`        | Elimina una ciudad.                       | **Sí**        |
+
+---
+**Películas**
+| Método | Endpoint                    | Descripción                               | Requiere Auth |
+|--------|-----------------------------|-------------------------------------------|---------------|
+| `GET`  | `/api/peliculas`            | Obtiene la lista de todas las películas.  | No            |
+| `POST` | `/api/peliculas`            | Crea una nueva película.                  | **Sí**        |
+| `PUT`  | `/api/peliculas/{id}`       | Actualiza una película existente.         | **Sí**        |
+| `DELETE`| `/api/peliculas/{id}`       | Elimina una película.                     | **Sí**        |
+
+*Para acceder a los endpoints protegidos, se debe incluir el token en la cabecera de la petición: `Authorization: Bearer <token_jwt>`.*
