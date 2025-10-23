@@ -50,7 +50,6 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno de desarr
 
 Abre una terminal y clona el proyecto desde GitHub:
 
-```bash
 git clone https://github.com/NeyderPiza/ProyectoEntonos-NBL-Cinemax.git
 cd ProyectoEntonos-NBL-Cinemax
 
